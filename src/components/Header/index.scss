@@ -1,0 +1,46 @@
+.nav-bar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    box-shadow: 4px 4px 25px 1px;
+    height: 55px;
+    background-image: linear-gradient(to right, lightpink,#bfbfbf);
+}
+.company-name{
+    text-decoration: none;
+    color: black;
+}
+.menu-container{
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    @media screen and (max-width:768px) {
+        display: none;
+    }
+}
+.menu-item{
+    font-weight: 600;
+    cursor: pointer;
+    &:hover{
+        font-size: 16px;
+        color: white;
+    }
+}
+.profile-conatiner{
+    display: flex;
+    align-items: center;
+}
+.profile-name{
+    font-weight: 600;
+}
+.profile-icon{
+    font-size: 30px;
+    margin: 10px;
+    cursor: pointer;
+    &:hover{
+        color: white;
+        
+    }
+}
