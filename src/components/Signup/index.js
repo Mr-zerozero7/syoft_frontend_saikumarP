@@ -6,6 +6,16 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub,FaFacebook } from "react-icons/fa6";
 
 
+const techIcons = [
+    'html','css','bootstrap','javascript',
+    'node01','python','sql','redux',
+    'react','mongodb']
+    
+const techName = [
+    'HTML','CSS','Bootstrap','JavaScript',
+    'Node','Express','React','SQL','MongoDB']
+
+
 // icons from react-icons
 
 const Signup = () => {
@@ -100,27 +110,16 @@ const Signup = () => {
         <div className='signup-wallpage-container'>
             <h1 className='signup-wall-head'>SignUp Note</h1>
             <div className='tech-icons-container'>
-                <img className='tech-icon' src='techIcons/html.png' alt='HTML' />
-                <img className='tech-icon' src='techIcons/css.png' alt='HTML' />
-                <img className='tech-icon' src='techIcons/bootstrap.png' alt='HTML' />
-                <img className='tech-icon' src='techIcons/javascript.png' alt='HTML' />
-                <img className='tech-icon' src='techIcons/node01.png' alt='HTML' />
-                <img className='tech-icon' src='techIcons/python.png' alt='HTML' />
-                <img className='tech-icon' src='techIcons/sql.png' alt='HTML' />
-                <img className='tech-icon' src='techIcons/redux.png' alt='HTML' />
-                <img className='tech-icon' src='techIcons/react.png' alt='HTML' />
-                <img className='tech-icon' src='techIcons/mongodb.png' alt='HTML' />
+                {techIcons.map(icon => (
+                    <img className='tech-icon' key={icon} src={`techIcons/${icon}.png`} alt={`${icon}`} />
+
+                ))}
             </div>
             <div className='tech-container'>
-                <p className='tech-name'>HTML</p>
-                <p className='tech-name'>CSS</p>
-                <p className='tech-name'>Bootstrap</p>
-                <p className='tech-name'>JavaScript</p>
-                <p className='tech-name'>Node JS</p>
-                <p className='tech-name'>Express JS</p>
-                <p className='tech-name'>React JS</p>
-                <p className='tech-name'>SQL</p>
-                <p className='tech-name'>MongoDB</p>
+                {techName.map(itemName => (
+                    <p className='tech-name' key={itemName}>{itemName}</p>
+
+                ))}
             </div>
         </div>
       </div>
